@@ -18,7 +18,10 @@ module.exports = {
     node: true,
     browser: true,
   },
-  plugins: ["only-warn"],
+  plugins: ["only-warn", "simple-import-sort"],
+  rules: {
+    "simple-import-sort/imports": ["error"],
+  },
   settings: {
     "import/resolver": {
       typescript: {
