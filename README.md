@@ -1,81 +1,32 @@
-# Turborepo starter
+# **JobCrawler**
 
-This is an official starter Turborepo.
+각 회사의 채용 공고를 한 곳에 모아 구직자들에게 제공하는 플랫폼
 
-## Using this example
+## **프로젝트 개요**
 
-Run the following command:
+JobCrawler는 개별 회사 사이트에 게시된 채용 공고를 수집하여 구직자에게 제공하는 웹 기반 플랫폼입니다. 기존의 외부 채용 사이트에만 의존하지 않고, 각 회사의 공식 채용 페이지에서 직접 정보를 수집하여 최신 채용 공고를 한 곳에 모아 구직자들이 쉽게 찾을 수 있도록 합니다.
 
-```sh
-npx create-turbo@latest
-```
+## **주요 기능**
 
-## What's inside?
+- **종합 채용 정보**: 다양한 회사의 채용 공고를 모아 한눈에 볼 수 있습니다.
+- **실시간 업데이트**: 회사 사이트에서 새로운 공고를 주기적으로 크롤링하고, 만료된 공고는 자동으로 삭제됩니다.
 
-This Turborepo includes the following packages/apps:
+## **기술 스택**
 
-### Apps and Packages
+- **프론트엔드**: Next.js + tailwind
+- **백엔드**: Node.js 및 Nest.js
+- **데이터베이스**: Mysql (prisma) - 채용 공고 저장 용도
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## **사용 방법**
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+1. 회원가입 또는 로그인 후 사이트 이용.
+2. 검색창 또는 필터를 사용해 원하는 채용 공고를 탐색.
+3. 특정 직무 또는 회사의 채용 알림을 구독.
+4. 제공된 링크를 통해 채용 공고에 직접 지원.
 
-### Utilities
+## **향후 기능**
 
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- **회사별 전용 페이지**: 각 회사의 과거 채용 공고 및 트렌드를 볼 수 있는 전용 페이지 제공.
+- **지원 관리 기능**: 사용자가 자신의 채용 지원 현황을 추적할 수 있는 기능.
+- **AI 추천**: 사용자의 프로필과 이전 검색 내역을 기반으로 맞춤형 채용 공고 추천.
+- **LinkedIn 및 기타 네트워크 통합**: 프로페셔널 네트워크와의 연동을 통해 쉽게 지원 가능.
